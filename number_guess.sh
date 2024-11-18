@@ -6,14 +6,13 @@ PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 echo -e "~~ Number Guessing Game ~~\n"
 
 RANDOM_NUMBER=$(( 1 + RANDOM % 1000 ))
-echo $RANDOM_NUMBER
 
 echo "Enter your username:"
 read USERNAME
 
 # Validate username length
-while [[ ${#USERNAME} -lt 3 ]]; do
-  echo "Username must be at least 3 characters. Please try again:"
+while [[ ${#USERNAME} -lt 22 ]]; do
+  echo "Username must be at least 22 characters. Please try again:"
   read USERNAME
 done
 
